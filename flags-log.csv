@@ -1,0 +1,3 @@
+date_flagged,ticker,what_was_unusual,oi_confirmed_new,boring_explanation,confidence,price_at_flag,price_1wk,price_2wk,what_happened,notes
+2026-09-04,GOOGL,"430C 9/11: 21k volume vs 93 OI, 27% OTM, C/P 2.54",unconfirmed (first run),spread leg / far-OTM flyer / data artifact,low,338.46,,,,check for matching volume near 350-360
+2026-09-04,TSLA,"stock vol 1.74x + 924k options call-skewed on a -5.9% day",unconfirmed (first run),big price move mechanically pulls in options volume,low,354.08,,,,call skew on a down day is the only non-self-explaining part

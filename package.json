@@ -1,0 +1,19 @@
+{
+  "name": "stock-screener",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Three-agent stock screener: data agent (script) + analysis agent + flagging agent. A screener, not a signal.",
+  "scripts": {
+    "fetch": "tsx fetch.ts",
+    "check": "tsx fetch.ts --selfcheck"
+  },
+  "dependencies": {
+    "yahoo-finance2": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
