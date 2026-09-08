@@ -15,12 +15,19 @@
 - Samples: `analysis/`, `flags/`, `brief/` for 2026-09-08 (real OI deltas vs 09-04 prior).
 - Windows scheduled task `stock-screener-fetch` runs the fetch 8am Tue–Sat.
 
+## Daily automation (split — the cloud sandbox cannot reach Yahoo)
+- **Local:** Windows task `stock-screener-fetch` runs `run-fetch.cmd` 08:00 Tue-Sat local:
+  `git pull` → `npm run fetch` → commit + push to GitHub (public repo). Needs PC on + logged in.
+- **Cloud:** routine `stock-screener-daily` (trig_01LFj67z31qhLHbXjqm7dDeK), cron `40 0 * * 2-6`
+  (00:40 UTC): clone → check data freshness → analysis + flagging + brief subagents →
+  email `brief/<date>.md` to benedictgrino6@gmail.com → archive brief to Drive folder
+  `stock-screener-snapshots`. If data is >30h stale it emails "no fresh data" instead.
+- Repo is PUBLIC (zero secrets) so the cloud clone needs no auth. OI continuity rides the
+  committed `data/*.json` history.
+
 ## Next
-1. Cloud routine for the emailed daily brief — BLOCKED on Benedict: `gh auth login` +
-   connect GitHub at claude.ai, then push repo + create routine.
-2. Run the 4 subagents in Claude Code opened in this folder, compare to the samples.
-3. After ~2 weeks, fill in `flags-log.csv` outcome columns.
-4. Research real-time options-flow sources for the 10-name watchlist + report cost (no wiring yet).
+1. Confirm the cloud routine test run emails a real brief (fetch step removed).
+2. After ~2 weeks, fill in `flags-log.csv` outcome columns.
 
 ## Decisions
 - Data agent is a script, not an LLM — LLMs can't reliably fetch structured market data.
