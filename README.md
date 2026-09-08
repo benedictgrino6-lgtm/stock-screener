@@ -17,6 +17,10 @@ Read `WHAT-OPTIONS-VOLUME-TELLS-YOU.md` before trusting any flag.
 3. **`.claude/agents/market-flagging.md`** — reads the analysis, gives at most 5 research
    candidates with the boring explanation for each. Output: `flags/YYYY-MM-DD.md` +
    a row in `flags-log.csv`.
+4. **`.claude/agents/market-brief.md`** — turns each flag into plain language for the daily
+   email: what is important about it and what the opportunity is. No buy/sell order, no
+   conviction score — context for your own research. Output: `brief/YYYY-MM-DD.md` (this is
+   the file the daily routine emails).
 
 ## Daily use
 
@@ -29,9 +33,11 @@ Then, in Claude Code opened in this folder:
 ```
 > use the market-analysis agent
 > use the market-flagging agent
+> use the market-brief agent
 ```
 
-Then read `flags/<today>.md` and do the actual research yourself — filings, news, earnings calendar.
+Then read `brief/<today>.md` and do the actual research yourself — filings, news, earnings
+calendar. The brief is context, not a recommendation.
 
 ## The habit that makes it worth anything
 
