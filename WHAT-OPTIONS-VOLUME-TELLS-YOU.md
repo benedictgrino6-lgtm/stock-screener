@@ -24,6 +24,20 @@ that sold you calls buys stock to stay neutral. A big block of calls can be a he
 short position — in which case the "bullish signal" is attached to someone who is actually
 bearish. You cannot tell these apart from the outside.
 
+## "Net premium" is still not net
+
+`fetch.ts` computes premium traded (volume x mid-price x 100) and splits it call vs put.
+Dollar-weighting is genuinely more informative than counting contracts — a $600M call
+premium day is different from a day with the same contract count in cheap far-OTM lottos.
+But it is **gross premium traded**, not net positioning. Half of every dollar was a seller.
+It tells you where the money churned, not which way anyone is leaning.
+
+## IV skew is a level, not a verdict
+
+Puts costing more than calls (positive skew) is the resting state of every equity — it is
+what portfolio insurance demand looks like. A *change* in skew is mildly informative; a
+single day's absolute number is not. Do not turn "skew is 0.04" into a market call.
+
 ## "Smart money" is a marketing frame
 
 The filings that reveal real institutional positions (13Fs) are published ~45 days late. By

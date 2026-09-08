@@ -46,6 +46,7 @@ interface ActiveStrike {
 interface Snapshot {
   ticker: string;
   fetchedAt: string;
+  sector: string; // "UNAVAILABLE" or "Index" for ETFs
   price: { current: Num; priorClose: Num; changePct: Num };
   history90d: { date: string; close: number; volume: number }[] | "UNAVAILABLE";
   volume: { today: Num; avg30d: Num; relativeToAvg: Num };
@@ -55,6 +56,19 @@ interface Snapshot {
     callVolume: Num;
     putVolume: Num;
     callPutRatio: Num;
+    // Dollar-weighted flow: volume x mid-price x 100. Gross premium *traded*, not
+    // net positioning — we still cannot tell bought from sold.
+    callPremiumTraded: Num;
+    putPremiumTraded: Num;
+    premiumCallPutRatio: Num;
+    // ~5% OTM put IV minus ~5% OTM call IV, nearest expiration. Positive = downside
+    // protection is bid up (the normal equity state); a jump vs its own recent level = fear.
+    ivSkew: {
+      otmPutIV: Num;
+      otmCallIV: Num;
+      skew: Num;
+      atmIV: Num;
+    };
     mostActiveStrikes: ActiveStrike[];
   };
   oiSnapshot: Record<string, number>; // contractSymbol -> OI, kept so tomorrow's run can diff it
@@ -116,6 +130,46 @@ function mkStrike(
   };
 }
 
+/** IV of the contract whose strike is closest to `target`, from a list. */
+function ivNearest(contracts: any[], target: number): number | null {
+  let best: any = null;
+  let bestDist = Infinity;
+  for (const c of contracts ?? []) {
+    if (typeof c.strike !== "number" || typeof c.impliedVolatility !== "number") continue;
+    const d = Math.abs(c.strike - target);
+    if (d < bestDist) {
+      bestDist = d;
+      best = c;
+    }
+  }
+  return best ? best.impliedVolatility : null;
+}
+
+/** ~5% OTM put IV minus ~5% OTM call IV for the nearest expiration. */
+function computeSkew(nearestChain: any, spot: number | null): Snapshot["options"]["ivSkew"] {
+  const blank = {
+    otmPutIV: "UNAVAILABLE" as Num,
+    otmCallIV: "UNAVAILABLE" as Num,
+    skew: "UNAVAILABLE" as Num,
+    atmIV: "UNAVAILABLE" as Num,
+  };
+  if (!nearestChain || spot == null) return blank;
+  const putIV = ivNearest(nearestChain.puts, spot * 0.95);
+  const callIV = ivNearest(nearestChain.calls, spot * 1.05);
+  const atmCall = ivNearest(nearestChain.calls, spot);
+  const atmPut = ivNearest(nearestChain.puts, spot);
+  const atm =
+    atmCall != null && atmPut != null
+      ? (atmCall + atmPut) / 2
+      : (atmCall ?? atmPut);
+  return {
+    otmPutIV: putIV != null ? +putIV.toFixed(4) : "UNAVAILABLE",
+    otmCallIV: callIV != null ? +callIV.toFixed(4) : "UNAVAILABLE",
+    skew: putIV != null && callIV != null ? +(putIV - callIV).toFixed(4) : "UNAVAILABLE",
+    atmIV: atm != null ? +atm.toFixed(4) : "UNAVAILABLE",
+  };
+}
+
 async function buildSnapshot(
   ticker: string,
   priorOIForTicker: Record<string, number>,
@@ -124,6 +178,7 @@ async function buildSnapshot(
   const s: Snapshot = {
     ticker,
     fetchedAt: new Date().toISOString(),
+    sector: "UNAVAILABLE",
     price: { current: "UNAVAILABLE", priorClose: "UNAVAILABLE", changePct: "UNAVAILABLE" },
     history90d: "UNAVAILABLE",
     volume: { today: "UNAVAILABLE", avg30d: "UNAVAILABLE", relativeToAvg: "UNAVAILABLE" },
@@ -133,6 +188,15 @@ async function buildSnapshot(
       callVolume: "UNAVAILABLE",
       putVolume: "UNAVAILABLE",
       callPutRatio: "UNAVAILABLE",
+      callPremiumTraded: "UNAVAILABLE",
+      putPremiumTraded: "UNAVAILABLE",
+      premiumCallPutRatio: "UNAVAILABLE",
+      ivSkew: {
+        otmPutIV: "UNAVAILABLE",
+        otmCallIV: "UNAVAILABLE",
+        skew: "UNAVAILABLE",
+        atmIV: "UNAVAILABLE",
+      },
       mostActiveStrikes: [],
     },
     oiSnapshot: {},
@@ -192,17 +256,28 @@ async function buildSnapshot(
     }
     let callVol = 0;
     let putVol = 0;
+    let callPrem = 0;
+    let putPrem = 0;
     const oiSnap: Record<string, number> = {};
     const all: ActiveStrike[] = [];
+    const mid = (o: any): number | null => {
+      if (typeof o.bid === "number" && typeof o.ask === "number" && o.ask > 0)
+        return (o.bid + o.ask) / 2;
+      return typeof o.lastPrice === "number" ? o.lastPrice : null;
+    };
     for (const ch of chains) {
       const exp = dayStr(ch.expirationDate);
       for (const c of ch.calls ?? []) {
         callVol += c.volume ?? 0;
+        const m = mid(c);
+        if (m != null) callPrem += (c.volume ?? 0) * m * 100;
         if (typeof c.openInterest === "number") oiSnap[c.contractSymbol] = c.openInterest;
         all.push(mkStrike("call", c, exp, priorOIForTicker));
       }
       for (const p of ch.puts ?? []) {
         putVol += p.volume ?? 0;
+        const m = mid(p);
+        if (m != null) putPrem += (p.volume ?? 0) * m * 100;
         if (typeof p.openInterest === "number") oiSnap[p.contractSymbol] = p.openInterest;
         all.push(mkStrike("put", p, exp, priorOIForTicker));
       }
@@ -212,10 +287,22 @@ async function buildSnapshot(
     s.options.putVolume = putVol;
     s.options.totalVolume = callVol + putVol;
     s.options.callPutRatio = putVol > 0 ? +(callVol / putVol).toFixed(2) : "UNAVAILABLE";
+    s.options.callPremiumTraded = Math.round(callPrem);
+    s.options.putPremiumTraded = Math.round(putPrem);
+    s.options.premiumCallPutRatio = putPrem > 0 ? +(callPrem / putPrem).toFixed(2) : "UNAVAILABLE";
     s.options.mostActiveStrikes = all.sort((a, b) => b.volume - a.volume).slice(0, TOP_STRIKES);
+    s.options.ivSkew = computeSkew(chains[0], typeof s.price.current === "number" ? s.price.current : null);
     s.oiSnapshot = oiSnap;
   } catch (e) {
     errors.push(`options: ${(e as Error).message}`);
+  }
+
+  try {
+    const qp: any = await yf.quoteSummary(ticker, { modules: ["assetProfile", "quoteType"] });
+    if (qp.quoteType?.quoteType === "ETF") s.sector = "Index";
+    else s.sector = qp.assetProfile?.sector ?? "UNAVAILABLE";
+  } catch (e) {
+    errors.push(`sector: ${(e as Error).message}`);
   }
 
   try {
@@ -265,6 +352,38 @@ function selfCheck(tickers: Snapshot[], expected: number): void {
   console.log("PASS");
 }
 
+const n = (v: Num): number => (typeof v === "number" ? v : 0);
+
+/** Group tickers by sector and roll up the flow. Ranked by premium call/put ratio. */
+function rollupSectors(tickers: Snapshot[]) {
+  const groups = new Map<string, Snapshot[]>();
+  for (const s of tickers) {
+    const key = s.sector === "UNAVAILABLE" ? "Unknown" : s.sector;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(s);
+  }
+  const rows = [...groups.entries()].map(([sector, members]) => {
+    const callVol = members.reduce((a, s) => a + n(s.options.callVolume), 0);
+    const putVol = members.reduce((a, s) => a + n(s.options.putVolume), 0);
+    const callPrem = members.reduce((a, s) => a + n(s.options.callPremiumTraded), 0);
+    const putPrem = members.reduce((a, s) => a + n(s.options.putPremiumTraded), 0);
+    const chgs = members.map((s) => s.price.changePct).filter((v): v is number => typeof v === "number");
+    return {
+      sector,
+      tickers: members.map((s) => s.ticker),
+      callVolume: callVol,
+      putVolume: putVol,
+      volumeCallPutRatio: putVol > 0 ? +(callVol / putVol).toFixed(2) : ("UNAVAILABLE" as Num),
+      callPremiumTraded: Math.round(callPrem),
+      putPremiumTraded: Math.round(putPrem),
+      premiumCallPutRatio: putPrem > 0 ? +(callPrem / putPrem).toFixed(2) : ("UNAVAILABLE" as Num),
+      avgPriceChangePct: chgs.length ? +(chgs.reduce((a, b) => a + b, 0) / chgs.length).toFixed(2) : ("UNAVAILABLE" as Num),
+    };
+  });
+  // Most call-skewed premium first — the analysis agent reads this against avgPriceChangePct.
+  return rows.sort((a, b) => n(b.premiumCallPutRatio) - n(a.premiumCallPutRatio));
+}
+
 /** The date of the last completed trading session, from the newest chart bar. */
 function sessionDate(tickers: Snapshot[], fallback: string): string {
   const bars = tickers
@@ -305,6 +424,7 @@ async function main() {
       policy: "Every missing figure is 'UNAVAILABLE'. Nothing is estimated or carried forward.",
       expirationsPulledPerTicker: EXPIRATIONS_TO_PULL,
     },
+    sectors: rollupSectors(tickers),
     tickers,
   };
   const outPath = join(DATA_DIR, `${dateKey}.json`);

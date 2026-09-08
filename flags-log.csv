@@ -1,3 +1,5 @@
 date_flagged,ticker,what_was_unusual,oi_confirmed_new,boring_explanation,confidence,price_at_flag,price_1wk,price_2wk,what_happened,notes
-2026-09-04,GOOGL,"430C 9/11: 21k volume vs 93 OI, 27% OTM, C/P 2.54",unconfirmed (first run),spread leg / far-OTM flyer / data artifact,low,338.46,,,,check for matching volume near 350-360
-2026-09-04,TSLA,"stock vol 1.74x + 924k options call-skewed on a -5.9% day",unconfirmed (first run),big price move mechanically pulls in options volume,low,354.08,,,,call skew on a down day is the only non-self-explaining part
+2026-09-04,GOOGL,"430C 9/11: 21k volume vs 93 OI, 27% OTM, C/P 2.54",unconfirmed (first run),spread leg / far-OTM flyer / data artifact,low,338.46,,,resolved: gone from active strikes by 9/08 - was noise,pre-dates skew/premium signals
+2026-09-04,TSLA,"stock vol 1.74x + 924k options call-skewed on a -5.9% day",unconfirmed (first run),big price move mechanically pulls in options volume,low,354.08,,,,pre-dates skew/premium signals
+2026-09-08,AAPL,"235P 9/09: +14614 new OI, 26% OTM, 1DTE, IV 125%, 2nd day running, light stock volume",yes,spread leg or deep-OTM tail hedge,low-med,316.51,,,,check for offsetting AAPL leg at 300-315
+2026-09-08,AMD,"$207M call premium (premium C/P 13.7 vs count 2.2), IV skew went negative",weak (OI changes small vs volume),+6.7% up day pulls in call premium mechanically,low,509.70,,,,watch if premium+OI keep building post-move

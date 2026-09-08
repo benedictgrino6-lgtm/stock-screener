@@ -8,9 +8,10 @@ Read `WHAT-OPTIONS-VOLUME-TELLS-YOU.md` before trusting any flag.
 ## Parts
 
 1. **`fetch.ts`** — the data agent, as a deterministic script. Pulls price history,
-   volume, options volume, and change in open interest for the `watchlist.json` tickers.
-   Stamps a source + timestamp, writes `UNAVAILABLE` for anything missing, never estimates.
-   Output: `data/YYYY-MM-DD.json`.
+   volume, options volume, change in open interest, IV skew, dollar-weighted premium
+   traded, and a sector rollup for the `watchlist.json` tickers. Stamps a source +
+   timestamp, writes `UNAVAILABLE` for anything missing, never estimates.
+   Output: `data/YYYY-MM-DD.json` (`meta`, `sectors`, `tickers`).
 2. **`.claude/agents/market-analysis.md`** — reads the data file, describes the gap
    between options activity and price. Never says "bullish." Output: `analysis/YYYY-MM-DD.md`.
 3. **`.claude/agents/market-flagging.md`** — reads the analysis, gives at most 5 research

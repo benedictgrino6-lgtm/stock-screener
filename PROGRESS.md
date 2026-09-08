@@ -4,6 +4,8 @@
 - `fetch.ts` — data agent (deterministic script). Pulls price/volume/options/OI for 10
   tickers from Yahoo (yahoo-finance2 v4), writes `data/<session-date>.json`, self-checks.
   Stores a full OI snapshot each run so the next run can diff open interest.
+  Also: IV skew (~5% OTM put IV − call IV), dollar-weighted premium traded (call vs put),
+  and a `sectors` rollup ranked by premium call/put ratio vs avg price change.
 - `.claude/agents/market-analysis.md` — describes options-vs-price gaps, never interprets.
 - `.claude/agents/market-flagging.md` — ≤5 research candidates + boring explanation each.
 - `WHAT-OPTIONS-VOLUME-TELLS-YOU.md` — the "it's a screener not a signal" guardrail.
