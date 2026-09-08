@@ -98,10 +98,19 @@ function loadPrior(): {
     .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f) && f.slice(0, 10) < et)
     .sort();
   if (!files.length) return { priorDate: null, priorOI };
+  const priorFile = files.at(-1)!;
   try {
-    const j = JSON.parse(readFileSync(join(DATA_DIR, files.at(-1)!), "utf8"));
-    for (const t of j.tickers ?? []) if (t.oiSnapshot) priorOI.set(t.ticker, t.oiSnapshot);
-    return { priorDate: files.at(-1)!.slice(0, 10), priorOI };
+    // OI snapshots live in a sibling <date>.oi.json (keeps the main file under the
+    // 256KB agent read limit). Fall back to an embedded oiSnapshot for old files.
+    const oiPath = join(DATA_DIR, priorFile.replace(/\.json$/, ".oi.json"));
+    if (existsSync(oiPath)) {
+      const oi = JSON.parse(readFileSync(oiPath, "utf8")) as Record<string, Record<string, number>>;
+      for (const [ticker, snap] of Object.entries(oi)) priorOI.set(ticker, snap);
+    } else {
+      const j = JSON.parse(readFileSync(join(DATA_DIR, priorFile), "utf8"));
+      for (const t of j.tickers ?? []) if (t.oiSnapshot) priorOI.set(t.ticker, t.oiSnapshot);
+    }
+    return { priorDate: priorFile.slice(0, 10), priorOI };
   } catch {
     return { priorDate: null, priorOI };
   }
@@ -427,9 +436,18 @@ async function main() {
     sectors: rollupSectors(tickers),
     tickers,
   };
+  // Split the bulky per-contract OI snapshot into a sibling file so the main file
+  // stays under the 256KB agent read limit. Both are committed — .oi.json feeds
+  // tomorrow's diff, .json feeds the analysis agents.
+  const oiByTicker: Record<string, Record<string, number>> = {};
+  for (const t of tickers) {
+    oiByTicker[t.ticker] = t.oiSnapshot;
+    delete (t as { oiSnapshot?: unknown }).oiSnapshot;
+  }
   const outPath = join(DATA_DIR, `${dateKey}.json`);
   writeFileSync(outPath, JSON.stringify(out, null, 2));
-  console.log(`\nwrote ${outPath}`);
+  writeFileSync(join(DATA_DIR, `${dateKey}.oi.json`), JSON.stringify(oiByTicker));
+  console.log(`\nwrote ${outPath} (+ ${dateKey}.oi.json)`);
   selfCheck(tickers, watchlist.length);
 }
 
