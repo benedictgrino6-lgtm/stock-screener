@@ -8,8 +8,10 @@
   and a `sectors` rollup ranked by premium call/put ratio vs avg price change.
 - `.claude/agents/market-analysis.md` — describes options-vs-price gaps, never interprets.
 - `.claude/agents/market-flagging.md` — ≤5 research candidates + boring explanation each.
-- `.claude/agents/market-brief.md` — 4th step: each flag in plain language (significance +
-  opportunity), no buy/sell, no conviction. `brief/<date>.md` is what gets emailed.
+- `.claude/agents/market-brief.md` — 4th step: SHORT colour-coded email (🟢/🟡/🔴 verdict +
+  ≤3 items, every term glossed, "Watch for" learning prompt). Reads `CONTEXT.md`.
+- `CONTEXT.md` — reader profile (near-zero options knowledge, learning not trading,
+  10-sec attention). The brief adapts to it; edit as the reader learns.
 - `WHAT-OPTIONS-VOLUME-TELLS-YOU.md` — the "it's a screener not a signal" guardrail.
 - `flags-log.csv` — hit-rate tracking (fill in by hand after 1-2 weeks).
 - Samples: `analysis/`, `flags/`, `brief/` for 2026-09-08 (real OI deltas vs 09-04 prior).
@@ -19,15 +21,18 @@
 - **Local:** Windows task `stock-screener-fetch` runs `run-fetch.cmd` 08:00 Tue-Sat local:
   `git pull` → `npm run fetch` → commit + push to GitHub (public repo). Needs PC on + logged in.
 - **Cloud:** routine `stock-screener-daily` (trig_01LFj67z31qhLHbXjqm7dDeK), cron `40 0 * * 2-6`
-  (00:40 UTC): clone → check data freshness → analysis + flagging + brief subagents →
-  email `brief/<date>.md` to benedictgrino6@gmail.com → archive brief to Drive folder
-  `stock-screener-snapshots`. If data is >30h stale it emails "no fresh data" instead.
-- Repo is PUBLIC (zero secrets) so the cloud clone needs no auth. OI continuity rides the
-  committed `data/*.json` history.
+  (00:40 UTC ≈ 08:40 local). Repo attached as a `git_repository` source (works now that repo
+  is public). Runs the 3 analysis passes INLINE (no subagents — they orphan) → emails the
+  brief → archives to Drive → phone push → commits + pushes back. >30h stale data → emails
+  "no fresh data" instead.
+- **Confirmed working:** 2026-09-09 and 2026-09-10 cron runs emailed real briefs.
 
 ## Next
-1. Confirm the cloud routine test run emails a real brief (fetch step removed).
-2. After ~2 weeks, fill in `flags-log.csv` outcome columns.
+1. Confirm the short colour-coded brief format lands (test run 2026-09-10 12:19 UTC).
+2. `flags-log.csv` accumulation: cloud push was blocked pre-source-attach; verify it pushes now.
+3. After ~2 weeks, fill in `flags-log.csv` outcome columns.
+4. Watch: `dateKey` stuck at 2026-09-08 across days (Yahoo last-bar not advancing in this
+   window) → OI diff degrades to first-run. Self-corrects when the market calendar advances.
 
 ## Decisions
 - Data agent is a script, not an LLM — LLMs can't reliably fetch structured market data.
