@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedAt": "2026-09-08T18:09:36.809Z",
+    "generatedAt": "2026-09-10T00:00:13.646Z",
     "dateKey": "2026-09-08",
     "dateKeyMeaning": "date of the last completed trading session this data represents",
     "source": "Yahoo Finance via yahoo-finance2 v4 (price/options delayed ~15min; open interest = prior-session settlement)",
-    "priorSnapshotDate": "2026-09-04",
+    "priorSnapshotDate": "NONE (first run — OI changes are UNAVAILABLE)",
     "policy": "Every missing figure is 'UNAVAILABLE'. Nothing is estimated or carried forward.",
     "expirationsPulledPerTicker": 3
   },
@@ -15,27 +15,13 @@
         "META",
         "GOOGL"
       ],
-      "callVolume": 288634,
-      "putVolume": 135628,
-      "volumeCallPutRatio": 2.13,
-      "callPremiumTraded": 116079526,
-      "putPremiumTraded": 26060444,
-      "premiumCallPutRatio": 4.45,
-      "avgPriceChangePct": -0.06
-    },
-    {
-      "sector": "Consumer Cyclical",
-      "tickers": [
-        "TSLA",
-        "AMZN"
-      ],
-      "callVolume": 1334956,
-      "putVolume": 670886,
-      "volumeCallPutRatio": 1.99,
-      "callPremiumTraded": 565676508,
-      "putPremiumTraded": 151790600,
-      "premiumCallPutRatio": 3.73,
-      "avgPriceChangePct": 1.42
+      "callVolume": 339022,
+      "putVolume": 179739,
+      "volumeCallPutRatio": 1.89,
+      "callPremiumTraded": 235945523,
+      "putPremiumTraded": 56614163,
+      "premiumCallPutRatio": 4.17,
+      "avgPriceChangePct": 2.13
     },
     {
       "sector": "Technology",
@@ -45,13 +31,27 @@
         "NVDA",
         "AMD"
       ],
-      "callVolume": 1351426,
-      "putVolume": 858898,
-      "volumeCallPutRatio": 1.57,
-      "callPremiumTraded": 356720299,
-      "putPremiumTraded": 174105266,
-      "premiumCallPutRatio": 2.05,
-      "avgPriceChangePct": 0.47
+      "callVolume": 1155691,
+      "putVolume": 592934,
+      "volumeCallPutRatio": 1.95,
+      "callPremiumTraded": 334274999,
+      "putPremiumTraded": 108797139,
+      "premiumCallPutRatio": 3.07,
+      "avgPriceChangePct": 0.34
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "tickers": [
+        "TSLA",
+        "AMZN"
+      ],
+      "callVolume": 554081,
+      "putVolume": 359129,
+      "volumeCallPutRatio": 1.54,
+      "callPremiumTraded": 205952771,
+      "putPremiumTraded": 139103940,
+      "premiumCallPutRatio": 1.48,
+      "avgPriceChangePct": -0.94
     },
     {
       "sector": "Index",
@@ -59,31 +59,26 @@
         "SPY",
         "QQQ"
       ],
-      "callVolume": 5090336,
-      "putVolume": 5533501,
-      "volumeCallPutRatio": 0.92,
-      "callPremiumTraded": 486037639,
-      "putPremiumTraded": 252467627,
-      "premiumCallPutRatio": 1.93,
-      "avgPriceChangePct": -0.08
+      "callVolume": 1282692,
+      "putVolume": 1663711,
+      "volumeCallPutRatio": 0.77,
+      "callPremiumTraded": 354327041,
+      "putPremiumTraded": 356508782,
+      "premiumCallPutRatio": 0.99,
+      "avgPriceChangePct": -0.38
     }
   ],
   "tickers": [
     {
       "ticker": "AAPL",
-      "fetchedAt": "2026-09-08T18:09:36.825Z",
+      "fetchedAt": "2026-09-10T00:00:13.669Z",
       "sector": "Technology",
       "price": {
-        "current": 316.1257,
-        "priorClose": 319.97,
-        "changePct": -1.2
+        "current": 315.34,
+        "priorClose": 316.22,
+        "changePct": -0.28
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 280.14,
-          "volume": 79915400
-        },
         {
           "date": "2026-05-04",
           "close": 276.83,
@@ -517,118 +512,118 @@
         {
           "date": "2026-09-04",
           "close": 319.97,
-          "volume": 39551800
+          "volume": 39606900
         },
         {
           "date": "2026-09-08",
-          "close": 316.13,
-          "volume": 17651122
+          "close": 316.22,
+          "volume": 35477100
         }
       ],
       "volume": {
-        "today": 17650264,
-        "avg30d": 46634614,
-        "relativeToAvg": 0.38
+        "today": 64902991,
+        "avg30d": 47230650,
+        "relativeToAvg": 1.37
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 397981,
-        "callVolume": 239583,
-        "putVolume": 158398,
-        "callPutRatio": 1.51,
-        "callPremiumTraded": 48622473,
-        "putPremiumTraded": 27114086,
-        "premiumCallPutRatio": 1.79,
+        "totalVolume": 907619,
+        "callVolume": 628094,
+        "putVolume": 279525,
+        "callPutRatio": 2.25,
+        "callPremiumTraded": 139955412,
+        "putPremiumTraded": 47937914,
+        "premiumCallPutRatio": 2.92,
         "ivSkew": {
-          "otmPutIV": 0.3887,
-          "otmCallIV": 0.3984,
-          "skew": -0.0098,
-          "atmIV": 0.3454
+          "otmPutIV": 0.4277,
+          "otmCallIV": 0.417,
+          "skew": 0.0107,
+          "atmIV": 0.3757
         },
         "mostActiveStrikes": [
-          {
-            "type": "call",
-            "contractSymbol": "AAPL260909C00320000",
-            "strike": 320,
-            "expiration": "2026-09-09",
-            "volume": 27604,
-            "openInterest": 6517,
-            "oiChangeFromPrior": -409,
-            "impliedVolatility": 0.3455
-          },
-          {
-            "type": "put",
-            "contractSymbol": "AAPL260909P00315000",
-            "strike": 315,
-            "expiration": "2026-09-09",
-            "volume": 21945,
-            "openInterest": 3309,
-            "oiChangeFromPrior": 1508,
-            "impliedVolatility": 0.3469
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AAPL260909C00317500",
-            "strike": 317.5,
-            "expiration": "2026-09-09",
-            "volume": 17822,
-            "openInterest": 767,
-            "oiChangeFromPrior": 407,
-            "impliedVolatility": 0.343
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AAPL260909C00325000",
-            "strike": 325,
-            "expiration": "2026-09-09",
-            "volume": 17655,
-            "openInterest": 7130,
-            "oiChangeFromPrior": 2441,
-            "impliedVolatility": 0.3579
-          },
           {
             "type": "call",
             "contractSymbol": "AAPL260911C00320000",
             "strike": 320,
             "expiration": "2026-09-11",
-            "volume": 16890,
-            "openInterest": 9591,
-            "oiChangeFromPrior": 5479,
-            "impliedVolatility": 0.3511
-          },
-          {
-            "type": "put",
-            "contractSymbol": "AAPL260909P00310000",
-            "strike": 310,
-            "expiration": "2026-09-09",
-            "volume": 16349,
-            "openInterest": 3943,
-            "oiChangeFromPrior": 2710,
-            "impliedVolatility": 0.3467
-          },
-          {
-            "type": "put",
-            "contractSymbol": "AAPL260909P00235000",
-            "strike": 235,
-            "expiration": "2026-09-09",
-            "volume": 14615,
-            "openInterest": 14614,
-            "oiChangeFromPrior": 14614,
-            "impliedVolatility": 1.25
+            "volume": 127455,
+            "openInterest": 17939,
+            "oiChangeFromPrior": 8348,
+            "impliedVolatility": 0.385
           },
           {
             "type": "call",
-            "contractSymbol": "AAPL260909C00330000",
+            "contractSymbol": "AAPL260911C00315000",
+            "strike": 315,
+            "expiration": "2026-09-11",
+            "volume": 82793,
+            "openInterest": 5279,
+            "oiChangeFromPrior": 1796,
+            "impliedVolatility": 0.3897
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AAPL260911C00330000",
             "strike": 330,
-            "expiration": "2026-09-09",
-            "volume": 14463,
-            "openInterest": 12538,
-            "oiChangeFromPrior": 4047,
-            "impliedVolatility": 0.3867
+            "expiration": "2026-09-11",
+            "volume": 59669,
+            "openInterest": 22560,
+            "oiChangeFromPrior": 5827,
+            "impliedVolatility": 0.417
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AAPL260911C00317500",
+            "strike": 317.5,
+            "expiration": "2026-09-11",
+            "volume": 57357,
+            "openInterest": 2896,
+            "oiChangeFromPrior": 1952,
+            "impliedVolatility": 0.3828
+          },
+          {
+            "type": "put",
+            "contractSymbol": "AAPL260911P00310000",
+            "strike": 310,
+            "expiration": "2026-09-11",
+            "volume": 49165,
+            "openInterest": 8179,
+            "oiChangeFromPrior": 2177,
+            "impliedVolatility": 0.3674
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AAPL260911C00325000",
+            "strike": 325,
+            "expiration": "2026-09-11",
+            "volume": 45987,
+            "openInterest": 18543,
+            "oiChangeFromPrior": 3267,
+            "impliedVolatility": 0.398
+          },
+          {
+            "type": "put",
+            "contractSymbol": "AAPL260911P00315000",
+            "strike": 315,
+            "expiration": "2026-09-11",
+            "volume": 29673,
+            "openInterest": 5894,
+            "oiChangeFromPrior": 3069,
+            "impliedVolatility": 0.3618
+          },
+          {
+            "type": "put",
+            "contractSymbol": "AAPL260911P00305000",
+            "strike": 305,
+            "expiration": "2026-09-11",
+            "volume": 27298,
+            "openInterest": 5197,
+            "oiChangeFromPrior": 556,
+            "impliedVolatility": 0.3877
           }
         ]
       },
@@ -642,19 +637,14 @@
     },
     {
       "ticker": "MSFT",
-      "fetchedAt": "2026-09-08T18:09:40.776Z",
+      "fetchedAt": "2026-09-10T00:00:17.724Z",
       "sector": "Technology",
       "price": {
-        "current": 492.5,
-        "priorClose": 499.7,
-        "changePct": -1.44
+        "current": 491.65,
+        "priorClose": 493.95,
+        "changePct": -0.47
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 414.44,
-          "volume": 31372400
-        },
         {
           "date": "2026-05-04",
           "close": 413.62,
@@ -1088,118 +1078,118 @@
         {
           "date": "2026-09-04",
           "close": 499.7,
-          "volume": 18074400
+          "volume": 18101800
         },
         {
           "date": "2026-09-08",
-          "close": 492.5,
-          "volume": 8221440
+          "close": 493.95,
+          "volume": 18882300
         }
       ],
       "volume": {
-        "today": 8221440,
-        "avg30d": 31154225,
-        "relativeToAvg": 0.26
+        "today": 12778304,
+        "avg30d": 31510500,
+        "relativeToAvg": 0.41
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 109663,
-        "callVolume": 65698,
-        "putVolume": 43965,
-        "callPutRatio": 1.49,
-        "callPremiumTraded": 15853112,
-        "putPremiumTraded": 10501561,
-        "premiumCallPutRatio": 1.51,
+        "totalVolume": 57458,
+        "callVolume": 37682,
+        "putVolume": 19776,
+        "callPutRatio": 1.91,
+        "callPremiumTraded": 11420119,
+        "putPremiumTraded": 6769879,
+        "premiumCallPutRatio": 1.69,
         "ivSkew": {
-          "otmPutIV": 0.3066,
-          "otmCallIV": 0.25,
-          "skew": 0.0566,
-          "atmIV": 0.1998
+          "otmPutIV": 0.394,
+          "otmCallIV": 0.3428,
+          "skew": 0.0513,
+          "atmIV": 0.3175
         },
         "mostActiveStrikes": [
           {
-            "type": "put",
-            "contractSymbol": "MSFT260909P00490000",
-            "strike": 490,
-            "expiration": "2026-09-09",
-            "volume": 9740,
-            "openInterest": 742,
-            "oiChangeFromPrior": 511,
-            "impliedVolatility": 0.1904
-          },
-          {
             "type": "call",
-            "contractSymbol": "MSFT260909C00500000",
+            "contractSymbol": "MSFT260911C00500000",
             "strike": 500,
-            "expiration": "2026-09-09",
-            "volume": 8351,
-            "openInterest": 1168,
-            "oiChangeFromPrior": 920,
-            "impliedVolatility": 0.2178
+            "expiration": "2026-09-11",
+            "volume": 7052,
+            "openInterest": 3353,
+            "oiChangeFromPrior": 1385,
+            "impliedVolatility": 0.3203
           },
           {
             "type": "call",
-            "contractSymbol": "MSFT260909C00495000",
+            "contractSymbol": "MSFT260911C00495000",
             "strike": 495,
-            "expiration": "2026-09-09",
-            "volume": 6539,
-            "openInterest": 138,
-            "oiChangeFromPrior": -6,
-            "impliedVolatility": 0.2112
-          },
-          {
-            "type": "put",
-            "contractSymbol": "MSFT260909P00492500",
-            "strike": 492.5,
-            "expiration": "2026-09-09",
-            "volume": 4561,
-            "openInterest": 400,
-            "oiChangeFromPrior": 304,
-            "impliedVolatility": 0.1932
+            "expiration": "2026-09-11",
+            "volume": 4107,
+            "openInterest": 1574,
+            "oiChangeFromPrior": 666,
+            "impliedVolatility": 0.3181
           },
           {
             "type": "call",
-            "contractSymbol": "MSFT260909C00492500",
-            "strike": 492.5,
-            "expiration": "2026-09-09",
-            "volume": 4440,
-            "openInterest": 382,
-            "oiChangeFromPrior": 348,
-            "impliedVolatility": 0.2063
-          },
-          {
-            "type": "call",
-            "contractSymbol": "MSFT260909C00505000",
+            "contractSymbol": "MSFT260911C00505000",
             "strike": 505,
-            "expiration": "2026-09-09",
-            "volume": 4304,
-            "openInterest": 3348,
-            "oiChangeFromPrior": 3222,
-            "impliedVolatility": 0.2249
+            "expiration": "2026-09-11",
+            "volume": 3769,
+            "openInterest": 3144,
+            "oiChangeFromPrior": 750,
+            "impliedVolatility": 0.325
           },
           {
             "type": "put",
-            "contractSymbol": "MSFT260909P00485000",
+            "contractSymbol": "MSFT260911P00490000",
+            "strike": 490,
+            "expiration": "2026-09-11",
+            "volume": 3326,
+            "openInterest": 2815,
+            "oiChangeFromPrior": 393,
+            "impliedVolatility": 0.3088
+          },
+          {
+            "type": "put",
+            "contractSymbol": "MSFT260911P00485000",
             "strike": 485,
-            "expiration": "2026-09-09",
-            "volume": 3934,
-            "openInterest": 472,
-            "oiChangeFromPrior": 327,
-            "impliedVolatility": 0.1936
+            "expiration": "2026-09-11",
+            "volume": 2964,
+            "openInterest": 1712,
+            "oiChangeFromPrior": 972,
+            "impliedVolatility": 0.3117
+          },
+          {
+            "type": "put",
+            "contractSymbol": "MSFT260911P00487500",
+            "strike": 487.5,
+            "expiration": "2026-09-11",
+            "volume": 2681,
+            "openInterest": 698,
+            "oiChangeFromPrior": 92,
+            "impliedVolatility": 0.3093
           },
           {
             "type": "call",
-            "contractSymbol": "MSFT260909C00497500",
+            "contractSymbol": "MSFT260911C00497500",
             "strike": 497.5,
-            "expiration": "2026-09-09",
-            "volume": 3219,
-            "openInterest": 349,
-            "oiChangeFromPrior": 205,
-            "impliedVolatility": 0.2162
+            "expiration": "2026-09-11",
+            "volume": 1835,
+            "openInterest": 380,
+            "oiChangeFromPrior": 112,
+            "impliedVolatility": 0.3208
+          },
+          {
+            "type": "call",
+            "contractSymbol": "MSFT260911C00492500",
+            "strike": 492.5,
+            "expiration": "2026-09-11",
+            "volume": 1822,
+            "openInterest": 678,
+            "oiChangeFromPrior": 217,
+            "impliedVolatility": 0.3243
           }
         ]
       },
@@ -1207,27 +1197,20 @@
         "nextEarnings": "2026-10-28",
         "exDividend": "2026-08-20",
         "dividendPay": "2026-09-10",
-        "within30d": [
-          "dividend pay 2026-09-10"
-        ]
+        "within30d": []
       },
       "errors": []
     },
     {
       "ticker": "NVDA",
-      "fetchedAt": "2026-09-08T18:09:42.940Z",
+      "fetchedAt": "2026-09-10T00:00:19.983Z",
       "sector": "Technology",
       "price": {
-        "current": 225.99,
-        "priorClose": 230.36,
-        "changePct": -1.9
+        "current": 223.67,
+        "priorClose": 225.73,
+        "changePct": -0.91
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 198.45,
-          "volume": 128647000
-        },
         {
           "date": "2026-05-04",
           "close": 198.48,
@@ -1661,118 +1644,118 @@
         {
           "date": "2026-09-04",
           "close": 230.36,
-          "volume": 134946800
+          "volume": 135352400
         },
         {
           "date": "2026-09-08",
-          "close": 225.99,
-          "volume": 77592298
+          "close": 225.73,
+          "volume": 122965600
         }
       ],
       "volume": {
-        "today": 77592298,
-        "avg30d": 128249290,
+        "today": 79204871,
+        "avg30d": 129775253,
         "relativeToAvg": 0.61
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 1373796,
-        "callVolume": 821388,
-        "putVolume": 552408,
-        "callPutRatio": 1.49,
-        "callPremiumTraded": 79484912,
-        "putPremiumTraded": 114682831,
-        "premiumCallPutRatio": 0.69,
+        "totalVolume": 623099,
+        "callVolume": 389382,
+        "putVolume": 233717,
+        "callPutRatio": 1.67,
+        "callPremiumTraded": 74006488,
+        "putPremiumTraded": 37408271,
+        "premiumCallPutRatio": 1.98,
         "ivSkew": {
-          "otmPutIV": 0.3691,
-          "otmCallIV": 0.3555,
-          "skew": 0.0137,
-          "atmIV": 0.2705
+          "otmPutIV": 0.4473,
+          "otmCallIV": 0.415,
+          "skew": 0.0322,
+          "atmIV": 0.3805
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "NVDA260909C00230000",
+            "contractSymbol": "NVDA260911C00230000",
             "strike": 230,
-            "expiration": "2026-09-09",
-            "volume": 125728,
-            "openInterest": 16990,
-            "oiChangeFromPrior": -3351,
-            "impliedVolatility": 0.2734
+            "expiration": "2026-09-11",
+            "volume": 49562,
+            "openInterest": 43841,
+            "oiChangeFromPrior": 9296,
+            "impliedVolatility": 0.3799
           },
           {
-            "type": "put",
-            "contractSymbol": "NVDA260909P00225000",
+            "type": "call",
+            "contractSymbol": "NVDA260911C00225000",
             "strike": 225,
-            "expiration": "2026-09-09",
-            "volume": 104657,
-            "openInterest": 8372,
-            "oiChangeFromPrior": 5181,
-            "impliedVolatility": 0.2598
+            "expiration": "2026-09-11",
+            "volume": 47797,
+            "openInterest": 16900,
+            "oiChangeFromPrior": 4215,
+            "impliedVolatility": 0.3726
           },
           {
             "type": "call",
-            "contractSymbol": "NVDA260909C00235000",
-            "strike": 235,
-            "expiration": "2026-09-09",
-            "volume": 96428,
-            "openInterest": 19009,
-            "oiChangeFromPrior": 9796,
-            "impliedVolatility": 0.3242
-          },
-          {
-            "type": "call",
-            "contractSymbol": "NVDA260909C00227500",
+            "contractSymbol": "NVDA260911C00227500",
             "strike": 227.5,
-            "expiration": "2026-09-09",
-            "volume": 84394,
-            "openInterest": 5522,
-            "oiChangeFromPrior": 490,
-            "impliedVolatility": 0.2712
+            "expiration": "2026-09-11",
+            "volume": 45801,
+            "openInterest": 47467,
+            "oiChangeFromPrior": 23298,
+            "impliedVolatility": 0.374
           },
           {
             "type": "put",
-            "contractSymbol": "NVDA260909P00227500",
-            "strike": 227.5,
-            "expiration": "2026-09-09",
-            "volume": 77869,
-            "openInterest": 4679,
-            "oiChangeFromPrior": 2905,
-            "impliedVolatility": 0.249
-          },
-          {
-            "type": "call",
-            "contractSymbol": "NVDA260909C00232500",
-            "strike": 232.5,
-            "expiration": "2026-09-09",
-            "volume": 77610,
-            "openInterest": 10762,
-            "oiChangeFromPrior": 3194,
-            "impliedVolatility": 0.2925
-          },
-          {
-            "type": "put",
-            "contractSymbol": "NVDA260909P00222500",
-            "strike": 222.5,
-            "expiration": "2026-09-09",
-            "volume": 45457,
-            "openInterest": 4318,
-            "oiChangeFromPrior": 1922,
-            "impliedVolatility": 0.2722
+            "contractSymbol": "NVDA260911P00220000",
+            "strike": 220,
+            "expiration": "2026-09-11",
+            "volume": 38272,
+            "openInterest": 31250,
+            "oiChangeFromPrior": 8147,
+            "impliedVolatility": 0.3904
           },
           {
             "type": "call",
             "contractSymbol": "NVDA260911C00235000",
             "strike": 235,
             "expiration": "2026-09-11",
-            "volume": 44501,
-            "openInterest": 32767,
-            "oiChangeFromPrior": 2405,
-            "impliedVolatility": 0.3411
+            "volume": 37203,
+            "openInterest": 57012,
+            "oiChangeFromPrior": 24245,
+            "impliedVolatility": 0.415
+          },
+          {
+            "type": "put",
+            "contractSymbol": "NVDA260911P00222500",
+            "strike": 222.5,
+            "expiration": "2026-09-11",
+            "volume": 24511,
+            "openInterest": 9208,
+            "oiChangeFromPrior": 2719,
+            "impliedVolatility": 0.386
+          },
+          {
+            "type": "call",
+            "contractSymbol": "NVDA260911C00237500",
+            "strike": 237.5,
+            "expiration": "2026-09-11",
+            "volume": 21927,
+            "openInterest": 45696,
+            "oiChangeFromPrior": 9966,
+            "impliedVolatility": 0.4512
+          },
+          {
+            "type": "put",
+            "contractSymbol": "NVDA260911P00225000",
+            "strike": 225,
+            "expiration": "2026-09-11",
+            "volume": 20578,
+            "openInterest": 13173,
+            "oiChangeFromPrior": 4011,
+            "impliedVolatility": 0.3897
           }
         ]
       },
@@ -1781,7 +1764,6 @@
         "exDividend": "2026-09-10",
         "dividendPay": "2026-10-01",
         "within30d": [
-          "ex-dividend 2026-09-10",
           "dividend pay 2026-10-01"
         ]
       },
@@ -1789,19 +1771,14 @@
     },
     {
       "ticker": "TSLA",
-      "fetchedAt": "2026-09-08T18:09:45.025Z",
+      "fetchedAt": "2026-09-10T00:00:22.233Z",
       "sector": "Consumer Cyclical",
       "price": {
-        "current": 365.96,
-        "priorClose": 354.08,
-        "changePct": 3.36
+        "current": 367.81,
+        "priorClose": 368.16,
+        "changePct": -0.1
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 390.82,
-          "volume": 65338300
-        },
         {
           "date": "2026-05-04",
           "close": 392.51,
@@ -2235,118 +2212,118 @@
         {
           "date": "2026-09-04",
           "close": 354.08,
-          "volume": 64829000
+          "volume": 65018200
         },
         {
           "date": "2026-09-08",
-          "close": 365.96,
-          "volume": 37365545
+          "close": 368.16,
+          "volume": 51078800
         }
       ],
       "volume": {
-        "today": 37365406,
-        "avg30d": 37172532,
-        "relativeToAvg": 1.01
+        "today": 32340063,
+        "avg30d": 37635947,
+        "relativeToAvg": 0.86
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 1721500,
-        "callVolume": 1137859,
-        "putVolume": 583641,
-        "callPutRatio": 1.95,
-        "callPremiumTraded": 484807782,
-        "putPremiumTraded": 120609957,
-        "premiumCallPutRatio": 4.02,
+        "totalVolume": 701537,
+        "callVolume": 410272,
+        "putVolume": 291265,
+        "callPutRatio": 1.41,
+        "callPremiumTraded": 142623175,
+        "putPremiumTraded": 107821326,
+        "premiumCallPutRatio": 1.32,
         "ivSkew": {
-          "otmPutIV": 0.3906,
-          "otmCallIV": 0.4087,
-          "skew": -0.0181,
-          "atmIV": 0.3503
+          "otmPutIV": 0.5151,
+          "otmCallIV": 0.5244,
+          "skew": -0.0093,
+          "atmIV": 0.4927
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "TSLA260909C00370000",
-            "strike": 370,
-            "expiration": "2026-09-09",
-            "volume": 151854,
-            "openInterest": 5146,
-            "oiChangeFromPrior": 3722,
-            "impliedVolatility": 0.3721
-          },
-          {
-            "type": "call",
-            "contractSymbol": "TSLA260909C00365000",
-            "strike": 365,
-            "expiration": "2026-09-09",
-            "volume": 116093,
-            "openInterest": 5817,
-            "oiChangeFromPrior": 3757,
-            "impliedVolatility": 0.3755
-          },
-          {
-            "type": "call",
-            "contractSymbol": "TSLA260909C00367500",
-            "strike": 367.5,
-            "expiration": "2026-09-09",
-            "volume": 76267,
-            "openInterest": 2084,
-            "oiChangeFromPrior": 1758,
-            "impliedVolatility": 0.3762
-          },
-          {
-            "type": "call",
-            "contractSymbol": "TSLA260909C00362500",
-            "strike": 362.5,
-            "expiration": "2026-09-09",
-            "volume": 71177,
-            "openInterest": 2520,
-            "oiChangeFromPrior": 1912,
-            "impliedVolatility": 0.3801
-          },
-          {
-            "type": "call",
-            "contractSymbol": "TSLA260909C00360000",
-            "strike": 360,
-            "expiration": "2026-09-09",
-            "volume": 71069,
-            "openInterest": 8915,
-            "oiChangeFromPrior": 6998,
-            "impliedVolatility": 0.3989
-          },
-          {
-            "type": "call",
-            "contractSymbol": "TSLA260909C00375000",
+            "contractSymbol": "TSLA260911C00375000",
             "strike": 375,
-            "expiration": "2026-09-09",
-            "volume": 68917,
-            "openInterest": 2376,
-            "oiChangeFromPrior": 1139,
-            "impliedVolatility": 0.376
+            "expiration": "2026-09-11",
+            "volume": 47171,
+            "openInterest": 5823,
+            "oiChangeFromPrior": 1090,
+            "impliedVolatility": 0.5039
+          },
+          {
+            "type": "call",
+            "contractSymbol": "TSLA260911C00370000",
+            "strike": 370,
+            "expiration": "2026-09-11",
+            "volume": 46065,
+            "openInterest": 15128,
+            "oiChangeFromPrior": 893,
+            "impliedVolatility": 0.5027
+          },
+          {
+            "type": "call",
+            "contractSymbol": "TSLA260911C00380000",
+            "strike": 380,
+            "expiration": "2026-09-11",
+            "volume": 39047,
+            "openInterest": 9863,
+            "oiChangeFromPrior": 1871,
+            "impliedVolatility": 0.5115
           },
           {
             "type": "put",
-            "contractSymbol": "TSLA260909P00360000",
-            "strike": 360,
-            "expiration": "2026-09-09",
-            "volume": 68038,
-            "openInterest": 4678,
-            "oiChangeFromPrior": -8485,
-            "impliedVolatility": 0.3303
+            "contractSymbol": "TSLA260911P00370000",
+            "strike": 370,
+            "expiration": "2026-09-11",
+            "volume": 29353,
+            "openInterest": 3083,
+            "oiChangeFromPrior": 537,
+            "impliedVolatility": 0.4896
           },
           {
             "type": "call",
-            "contractSymbol": "TSLA260909C00372500",
+            "contractSymbol": "TSLA260911C00372500",
             "strike": 372.5,
-            "expiration": "2026-09-09",
-            "volume": 54737,
-            "openInterest": 1820,
-            "oiChangeFromPrior": 1092,
-            "impliedVolatility": 0.3745
+            "expiration": "2026-09-11",
+            "volume": 26537,
+            "openInterest": 2987,
+            "oiChangeFromPrior": 828,
+            "impliedVolatility": 0.5012
+          },
+          {
+            "type": "put",
+            "contractSymbol": "TSLA260911P00360000",
+            "strike": 360,
+            "expiration": "2026-09-11",
+            "volume": 26122,
+            "openInterest": 5093,
+            "oiChangeFromPrior": 1409,
+            "impliedVolatility": 0.4893
+          },
+          {
+            "type": "put",
+            "contractSymbol": "TSLA260911P00130000",
+            "strike": 130,
+            "expiration": "2026-09-11",
+            "volume": 23002,
+            "openInterest": 23790,
+            "oiChangeFromPrior": 0,
+            "impliedVolatility": 4.125
+          },
+          {
+            "type": "put",
+            "contractSymbol": "TSLA260911P00365000",
+            "strike": 365,
+            "expiration": "2026-09-11",
+            "volume": 21985,
+            "openInterest": 5857,
+            "oiChangeFromPrior": 4159,
+            "impliedVolatility": 0.4839
           }
         ]
       },
@@ -2360,19 +2337,14 @@
     },
     {
       "ticker": "AMZN",
-      "fetchedAt": "2026-09-08T18:09:47.183Z",
+      "fetchedAt": "2026-09-10T00:00:24.649Z",
       "sector": "Consumer Cyclical",
       "price": {
-        "current": 257.16,
-        "priorClose": 258.51,
-        "changePct": -0.52
+        "current": 252.4,
+        "priorClose": 256.97,
+        "changePct": -1.78
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 268.26,
-          "volume": 50825200
-        },
         {
           "date": "2026-05-04",
           "close": 272.05,
@@ -2806,118 +2778,118 @@
         {
           "date": "2026-09-04",
           "close": 258.51,
-          "volume": 30698000
+          "volume": 30749900
         },
         {
           "date": "2026-09-08",
-          "close": 257.16,
-          "volume": 15088233
+          "close": 256.97,
+          "volume": 29398000
         }
       ],
       "volume": {
-        "today": 15088233,
-        "avg30d": 41987628,
-        "relativeToAvg": 0.36
+        "today": 32177880,
+        "avg30d": 42466350,
+        "relativeToAvg": 0.76
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 284342,
-        "callVolume": 197097,
-        "putVolume": 87245,
-        "callPutRatio": 2.26,
-        "callPremiumTraded": 80868726,
-        "putPremiumTraded": 31180643,
-        "premiumCallPutRatio": 2.59,
+        "totalVolume": 211673,
+        "callVolume": 143809,
+        "putVolume": 67864,
+        "callPutRatio": 2.12,
+        "callPremiumTraded": 63329596,
+        "putPremiumTraded": 31282614,
+        "premiumCallPutRatio": 2.02,
         "ivSkew": {
-          "otmPutIV": 0.3262,
-          "otmCallIV": 0.3008,
-          "skew": 0.0254,
-          "atmIV": 0.2283
+          "otmPutIV": 0.3926,
+          "otmCallIV": 0.3838,
+          "skew": 0.0088,
+          "atmIV": 0.3333
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "AMZN260909C00257500",
-            "strike": 257.5,
-            "expiration": "2026-09-09",
-            "volume": 29462,
-            "openInterest": 1543,
-            "oiChangeFromPrior": 497,
-            "impliedVolatility": 0.2178
+            "contractSymbol": "AMZN260911C00255000",
+            "strike": 255,
+            "expiration": "2026-09-11",
+            "volume": 13270,
+            "openInterest": 3155,
+            "oiChangeFromPrior": 410,
+            "impliedVolatility": 0.3335
           },
           {
             "type": "call",
-            "contractSymbol": "AMZN260909C00260000",
+            "contractSymbol": "AMZN260911C00252500",
+            "strike": 252.5,
+            "expiration": "2026-09-11",
+            "volume": 12914,
+            "openInterest": 1027,
+            "oiChangeFromPrior": 120,
+            "impliedVolatility": 0.3486
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMZN260911C00260000",
             "strike": 260,
-            "expiration": "2026-09-09",
-            "volume": 21455,
-            "openInterest": 3994,
-            "oiChangeFromPrior": 1259,
-            "impliedVolatility": 0.23
+            "expiration": "2026-09-11",
+            "volume": 12553,
+            "openInterest": 9564,
+            "oiChangeFromPrior": 1597,
+            "impliedVolatility": 0.3486
           },
           {
             "type": "put",
-            "contractSymbol": "AMZN260909P00255000",
-            "strike": 255,
-            "expiration": "2026-09-09",
-            "volume": 15979,
-            "openInterest": 1746,
-            "oiChangeFromPrior": 1025,
-            "impliedVolatility": 0.2302
+            "contractSymbol": "AMZN260911P00250000",
+            "strike": 250,
+            "expiration": "2026-09-11",
+            "volume": 11035,
+            "openInterest": 4845,
+            "oiChangeFromPrior": 1185,
+            "impliedVolatility": 0.3208
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMZN260911C00232500",
+            "strike": 232.5,
+            "expiration": "2026-09-11",
+            "volume": 10804,
+            "openInterest": 110,
+            "oiChangeFromPrior": 109,
+            "impliedVolatility": 0.5918
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMZN260911C00257500",
+            "strike": 257.5,
+            "expiration": "2026-09-11",
+            "volume": 10461,
+            "openInterest": 2684,
+            "oiChangeFromPrior": 179,
+            "impliedVolatility": 0.3403
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMZN260911C00270000",
+            "strike": 270,
+            "expiration": "2026-09-11",
+            "volume": 9116,
+            "openInterest": 14020,
+            "oiChangeFromPrior": 957,
+            "impliedVolatility": 0.4297
           },
           {
             "type": "call",
             "contractSymbol": "AMZN260911C00265000",
             "strike": 265,
             "expiration": "2026-09-11",
-            "volume": 12660,
-            "openInterest": 10374,
-            "oiChangeFromPrior": 1280,
-            "impliedVolatility": 0.304
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMZN260911C00250000",
-            "strike": 250,
-            "expiration": "2026-09-11",
-            "volume": 10688,
-            "openInterest": 651,
-            "oiChangeFromPrior": 244,
-            "impliedVolatility": 0.2983
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMZN260909C00250000",
-            "strike": 250,
-            "expiration": "2026-09-09",
-            "volume": 9291,
-            "openInterest": 741,
-            "oiChangeFromPrior": 550,
-            "impliedVolatility": 0.1992
-          },
-          {
-            "type": "put",
-            "contractSymbol": "AMZN260909P00252500",
-            "strike": 252.5,
-            "expiration": "2026-09-09",
-            "volume": 8220,
-            "openInterest": 1160,
-            "oiChangeFromPrior": 681,
-            "impliedVolatility": 0.2315
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMZN260909C00247500",
-            "strike": 247.5,
-            "expiration": "2026-09-09",
-            "volume": 7905,
-            "openInterest": 444,
-            "oiChangeFromPrior": 317,
-            "impliedVolatility": 0
+            "volume": 7755,
+            "openInterest": 16159,
+            "oiChangeFromPrior": 5785,
+            "impliedVolatility": 0.3838
           }
         ]
       },
@@ -2931,19 +2903,14 @@
     },
     {
       "ticker": "META",
-      "fetchedAt": "2026-09-08T18:09:49.284Z",
+      "fetchedAt": "2026-09-10T00:00:26.869Z",
       "sector": "Communication Services",
       "price": {
-        "current": 616.77,
-        "priorClose": 616.77,
-        "changePct": 0
+        "current": 653.69,
+        "priorClose": 613.48,
+        "changePct": 6.55
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 608.75,
-          "volume": 21404000
-        },
         {
           "date": "2026-05-04",
           "close": 610.41,
@@ -3377,118 +3344,118 @@
         {
           "date": "2026-09-04",
           "close": 616.77,
-          "volume": 15942700
+          "volume": 15966200
         },
         {
           "date": "2026-09-08",
-          "close": 616.77,
-          "volume": 7299891
+          "close": 613.48,
+          "volume": 18909700
         }
       ],
       "volume": {
-        "today": 7299891,
-        "avg30d": 17005276,
-        "relativeToAvg": 0.43
+        "today": 35359694,
+        "avg30d": 17393053,
+        "relativeToAvg": 2.03
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 226733,
-        "callVolume": 161634,
-        "putVolume": 65099,
-        "callPutRatio": 2.48,
-        "callPremiumTraded": 86703741,
-        "putPremiumTraded": 21057232,
-        "premiumCallPutRatio": 4.12,
+        "totalVolume": 329274,
+        "callVolume": 204105,
+        "putVolume": 125169,
+        "callPutRatio": 1.63,
+        "callPremiumTraded": 214199248,
+        "putPremiumTraded": 48148077,
+        "premiumCallPutRatio": 4.45,
         "ivSkew": {
-          "otmPutIV": 0.3359,
-          "otmCallIV": 0.3584,
-          "skew": -0.0225,
-          "atmIV": 0.2904
+          "otmPutIV": 0.4817,
+          "otmCallIV": 0.5171,
+          "skew": -0.0354,
+          "atmIV": 0.4699
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "META260909C00620000",
-            "strike": 620,
-            "expiration": "2026-09-09",
-            "volume": 20755,
-            "openInterest": 2483,
-            "oiChangeFromPrior": -403,
-            "impliedVolatility": 0.3357
+            "contractSymbol": "META260911C00700000",
+            "strike": 700,
+            "expiration": "2026-09-11",
+            "volume": 19931,
+            "openInterest": 1378,
+            "oiChangeFromPrior": 170,
+            "impliedVolatility": 0.5496
           },
           {
             "type": "call",
             "contractSymbol": "META260911C00650000",
             "strike": 650,
             "expiration": "2026-09-11",
-            "volume": 15875,
-            "openInterest": 1896,
-            "oiChangeFromPrior": 491,
-            "impliedVolatility": 0.408
-          },
-          {
-            "type": "call",
-            "contractSymbol": "META260909C00625000",
-            "strike": 625,
-            "expiration": "2026-09-09",
-            "volume": 8905,
-            "openInterest": 888,
-            "oiChangeFromPrior": 421,
-            "impliedVolatility": 0.3309
-          },
-          {
-            "type": "call",
-            "contractSymbol": "META260909C00640000",
-            "strike": 640,
-            "expiration": "2026-09-09",
-            "volume": 8470,
-            "openInterest": 1100,
-            "oiChangeFromPrior": 726,
-            "impliedVolatility": 0.3435
+            "volume": 19880,
+            "openInterest": 9398,
+            "oiChangeFromPrior": 7502,
+            "impliedVolatility": 0.4694
           },
           {
             "type": "put",
-            "contractSymbol": "META260909P00617500",
-            "strike": 617.5,
-            "expiration": "2026-09-09",
-            "volume": 8438,
-            "openInterest": 151,
-            "oiChangeFromPrior": 95,
-            "impliedVolatility": 0.2401
+            "contractSymbol": "META260911P00640000",
+            "strike": 640,
+            "expiration": "2026-09-11",
+            "volume": 12850,
+            "openInterest": 49,
+            "oiChangeFromPrior": 10,
+            "impliedVolatility": 0.4672
           },
           {
             "type": "call",
-            "contractSymbol": "META260909C00635000",
-            "strike": 635,
-            "expiration": "2026-09-09",
-            "volume": 8172,
-            "openInterest": 517,
-            "oiChangeFromPrior": 347,
-            "impliedVolatility": 0.3364
+            "contractSymbol": "META260911C00660000",
+            "strike": 660,
+            "expiration": "2026-09-11",
+            "volume": 12364,
+            "openInterest": 5677,
+            "oiChangeFromPrior": 4921,
+            "impliedVolatility": 0.4696
           },
           {
             "type": "call",
-            "contractSymbol": "META260909C00630000",
-            "strike": 630,
-            "expiration": "2026-09-09",
-            "volume": 7834,
-            "openInterest": 820,
-            "oiChangeFromPrior": 536,
-            "impliedVolatility": 0.3333
+            "contractSymbol": "META260911C00680000",
+            "strike": 680,
+            "expiration": "2026-09-11",
+            "volume": 12007,
+            "openInterest": 638,
+            "oiChangeFromPrior": 297,
+            "impliedVolatility": 0.5013
           },
           {
             "type": "call",
-            "contractSymbol": "META260909C00617500",
-            "strike": 617.5,
-            "expiration": "2026-09-09",
-            "volume": 7802,
-            "openInterest": 751,
-            "oiChangeFromPrior": 491,
-            "impliedVolatility": 0.3406
+            "contractSymbol": "META260911C00652500",
+            "strike": 652.5,
+            "expiration": "2026-09-11",
+            "volume": 10762,
+            "openInterest": 1122,
+            "oiChangeFromPrior": 660,
+            "impliedVolatility": 0.4663
+          },
+          {
+            "type": "call",
+            "contractSymbol": "META260911C00655000",
+            "strike": 655,
+            "expiration": "2026-09-11",
+            "volume": 10303,
+            "openInterest": 563,
+            "oiChangeFromPrior": 175,
+            "impliedVolatility": 0.4705
+          },
+          {
+            "type": "call",
+            "contractSymbol": "META260911C00640000",
+            "strike": 640,
+            "expiration": "2026-09-11",
+            "volume": 9939,
+            "openInterest": 7559,
+            "oiChangeFromPrior": 4148,
+            "impliedVolatility": 0.4773
           }
         ]
       },
@@ -3502,19 +3469,14 @@
     },
     {
       "ticker": "GOOGL",
-      "fetchedAt": "2026-09-08T18:09:51.463Z",
+      "fetchedAt": "2026-09-10T00:00:29.234Z",
       "sector": "Communication Services",
       "price": {
-        "current": 338.08,
-        "priorClose": 338.46,
-        "changePct": -0.11
+        "current": 330.65,
+        "priorClose": 338.36,
+        "changePct": -2.28
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 385.69,
-          "volume": 30105200
-        },
         {
           "date": "2026-05-04",
           "close": 383.25,
@@ -3948,118 +3910,118 @@
         {
           "date": "2026-09-04",
           "close": 338.46,
-          "volume": 23157700
+          "volume": 23189300
         },
         {
           "date": "2026-09-08",
-          "close": 338.08,
-          "volume": 13631394
+          "close": 338.36,
+          "volume": 22915800
         }
       ],
       "volume": {
-        "today": 13631394,
-        "avg30d": 25287080,
-        "relativeToAvg": 0.54
+        "today": 32730889,
+        "avg30d": 25597613,
+        "relativeToAvg": 1.28
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 197529,
-        "callVolume": 127000,
-        "putVolume": 70529,
-        "callPutRatio": 1.8,
-        "callPremiumTraded": 29375785,
-        "putPremiumTraded": 5003212,
-        "premiumCallPutRatio": 5.87,
+        "totalVolume": 189487,
+        "callVolume": 134917,
+        "putVolume": 54570,
+        "callPutRatio": 2.47,
+        "callPremiumTraded": 21746275,
+        "putPremiumTraded": 8466086,
+        "premiumCallPutRatio": 2.57,
         "ivSkew": {
-          "otmPutIV": 0.3379,
-          "otmCallIV": 0.3125,
-          "skew": 0.0254,
-          "atmIV": 0.2393
+          "otmPutIV": 0.3906,
+          "otmCallIV": 0.4316,
+          "skew": -0.041,
+          "atmIV": 0.3475
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "GOOGL260909C00340000",
-            "strike": 340,
-            "expiration": "2026-09-09",
-            "volume": 29681,
-            "openInterest": 1430,
-            "oiChangeFromPrior": 1035,
-            "impliedVolatility": 0.2803
-          },
-          {
-            "type": "put",
-            "contractSymbol": "GOOGL260909P00330000",
+            "contractSymbol": "GOOGL260911C00330000",
             "strike": 330,
-            "expiration": "2026-09-09",
-            "volume": 13154,
-            "openInterest": 2114,
-            "oiChangeFromPrior": 1260,
-            "impliedVolatility": 0.2275
+            "expiration": "2026-09-11",
+            "volume": 17820,
+            "openInterest": 688,
+            "oiChangeFromPrior": 40,
+            "impliedVolatility": 0.3552
           },
           {
             "type": "call",
-            "contractSymbol": "GOOGL260909C00342500",
-            "strike": 342.5,
-            "expiration": "2026-09-09",
-            "volume": 12640,
-            "openInterest": 2666,
-            "oiChangeFromPrior": 2254,
-            "impliedVolatility": 0.2715
-          },
-          {
-            "type": "put",
-            "contractSymbol": "GOOGL260909P00325000",
-            "strike": 325,
-            "expiration": "2026-09-09",
-            "volume": 10694,
-            "openInterest": 874,
-            "oiChangeFromPrior": 484,
-            "impliedVolatility": 0.2764
+            "contractSymbol": "GOOGL260911C00332500",
+            "strike": 332.5,
+            "expiration": "2026-09-11",
+            "volume": 13963,
+            "openInterest": 749,
+            "oiChangeFromPrior": 23,
+            "impliedVolatility": 0.3499
           },
           {
             "type": "call",
-            "contractSymbol": "GOOGL260909C00337500",
-            "strike": 337.5,
-            "expiration": "2026-09-09",
-            "volume": 10054,
-            "openInterest": 605,
-            "oiChangeFromPrior": 292,
-            "impliedVolatility": 0.3109
-          },
-          {
-            "type": "call",
-            "contractSymbol": "GOOGL260909C00350000",
-            "strike": 350,
-            "expiration": "2026-09-09",
-            "volume": 9906,
-            "openInterest": 2936,
-            "oiChangeFromPrior": 293,
-            "impliedVolatility": 0.2764
-          },
-          {
-            "type": "put",
-            "contractSymbol": "GOOGL260909P00335000",
+            "contractSymbol": "GOOGL260911C00335000",
             "strike": 335,
-            "expiration": "2026-09-09",
-            "volume": 9841,
-            "openInterest": 1024,
-            "oiChangeFromPrior": 703,
-            "impliedVolatility": 0.1919
+            "expiration": "2026-09-11",
+            "volume": 12383,
+            "openInterest": 3255,
+            "oiChangeFromPrior": 1248,
+            "impliedVolatility": 0.3508
           },
           {
             "type": "call",
-            "contractSymbol": "GOOGL260909C00345000",
+            "contractSymbol": "GOOGL260911C00340000",
+            "strike": 340,
+            "expiration": "2026-09-11",
+            "volume": 12124,
+            "openInterest": 5957,
+            "oiChangeFromPrior": 1382,
+            "impliedVolatility": 0.3667
+          },
+          {
+            "type": "call",
+            "contractSymbol": "GOOGL260911C00345000",
             "strike": 345,
-            "expiration": "2026-09-09",
-            "volume": 8356,
-            "openInterest": 3484,
-            "oiChangeFromPrior": 2013,
-            "impliedVolatility": 0.2661
+            "expiration": "2026-09-11",
+            "volume": 9237,
+            "openInterest": 6943,
+            "oiChangeFromPrior": 1310,
+            "impliedVolatility": 0.4082
+          },
+          {
+            "type": "put",
+            "contractSymbol": "GOOGL260911P00160000",
+            "strike": 160,
+            "expiration": "2026-09-11",
+            "volume": 8000,
+            "openInterest": 8000,
+            "oiChangeFromPrior": 0,
+            "impliedVolatility": 2.875
+          },
+          {
+            "type": "call",
+            "contractSymbol": "GOOGL260911C00337500",
+            "strike": 337.5,
+            "expiration": "2026-09-11",
+            "volume": 6921,
+            "openInterest": 903,
+            "oiChangeFromPrior": 67,
+            "impliedVolatility": 0.3574
+          },
+          {
+            "type": "put",
+            "contractSymbol": "GOOGL260914P00320000",
+            "strike": 320,
+            "expiration": "2026-09-14",
+            "volume": 6111,
+            "openInterest": 171,
+            "oiChangeFromPrior": 78,
+            "impliedVolatility": 0.281
           }
         ]
       },
@@ -4075,19 +4037,14 @@
     },
     {
       "ticker": "AMD",
-      "fetchedAt": "2026-09-08T18:09:53.554Z",
+      "fetchedAt": "2026-09-10T00:00:31.473Z",
       "sector": "Technology",
       "price": {
-        "current": 508.23,
-        "priorClose": 477.57,
-        "changePct": 6.42
+        "current": 521.095,
+        "priorClose": 505.74,
+        "changePct": 3.04
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 360.54,
-          "volume": 34279200
-        },
         {
           "date": "2026-05-04",
           "close": 341.54,
@@ -4521,78 +4478,48 @@
         {
           "date": "2026-09-04",
           "close": 477.57,
-          "volume": 19651900
+          "volume": 19678700
         },
         {
           "date": "2026-09-08",
-          "close": 508.23,
-          "volume": 19158733
+          "close": 505.74,
+          "volume": 28166500
         }
       ],
       "volume": {
-        "today": 19158596,
-        "avg30d": 22507071,
-        "relativeToAvg": 0.85
+        "today": 22033121,
+        "avg30d": 22808223,
+        "relativeToAvg": 0.97
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-09",
           "2026-09-11",
-          "2026-09-14"
+          "2026-09-14",
+          "2026-09-16"
         ],
-        "totalVolume": 328884,
-        "callVolume": 224757,
-        "putVolume": 104127,
-        "callPutRatio": 2.16,
-        "callPremiumTraded": 212759802,
-        "putPremiumTraded": 21806788,
-        "premiumCallPutRatio": 9.76,
+        "totalVolume": 160449,
+        "callVolume": 100533,
+        "putVolume": 59916,
+        "callPutRatio": 1.68,
+        "callPremiumTraded": 108892980,
+        "putPremiumTraded": 16681075,
+        "premiumCallPutRatio": 6.53,
         "ivSkew": {
-          "otmPutIV": 0.4673,
-          "otmCallIV": 0.4561,
-          "skew": 0.0112,
-          "atmIV": 0.433
+          "otmPutIV": 0.5872,
+          "otmCallIV": 0.5874,
+          "skew": -0.0002,
+          "atmIV": 0.5661
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "AMD260909C00500000",
-            "strike": 500,
-            "expiration": "2026-09-09",
-            "volume": 20075,
-            "openInterest": 1925,
-            "oiChangeFromPrior": 1258,
-            "impliedVolatility": 0.4573
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMD260909C00510000",
-            "strike": 510,
-            "expiration": "2026-09-09",
-            "volume": 17248,
-            "openInterest": 751,
-            "oiChangeFromPrior": 492,
-            "impliedVolatility": 0.4354
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMD260909C00515000",
-            "strike": 515,
-            "expiration": "2026-09-09",
-            "volume": 15273,
-            "openInterest": 440,
-            "oiChangeFromPrior": 338,
-            "impliedVolatility": 0.4216
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMD260911C00510000",
-            "strike": 510,
+            "contractSymbol": "AMD260911C00520000",
+            "strike": 520,
             "expiration": "2026-09-11",
-            "volume": 10549,
-            "openInterest": 1430,
-            "oiChangeFromPrior": 657,
-            "impliedVolatility": 0.5215
+            "volume": 14128,
+            "openInterest": 3160,
+            "oiChangeFromPrior": 436,
+            "impliedVolatility": 0.5687
           },
           {
             "type": "put",
@@ -4601,38 +4528,68 @@
             "expiration": "2026-09-11",
             "volume": 10000,
             "openInterest": 10008,
-            "oiChangeFromPrior": 10000,
-            "impliedVolatility": 4.25
+            "oiChangeFromPrior": 0,
+            "impliedVolatility": 6.125
           },
           {
             "type": "call",
-            "contractSymbol": "AMD260911C00500000",
-            "strike": 500,
+            "contractSymbol": "AMD260911C00525000",
+            "strike": 525,
             "expiration": "2026-09-11",
-            "volume": 9607,
-            "openInterest": 5499,
-            "oiChangeFromPrior": 2766,
-            "impliedVolatility": 0.515
+            "volume": 9876,
+            "openInterest": 1911,
+            "oiChangeFromPrior": 660,
+            "impliedVolatility": 0.5675
           },
           {
             "type": "call",
-            "contractSymbol": "AMD260909C00520000",
+            "contractSymbol": "AMD260911C00540000",
+            "strike": 540,
+            "expiration": "2026-09-11",
+            "volume": 7592,
+            "openInterest": 3885,
+            "oiChangeFromPrior": 700,
+            "impliedVolatility": 0.5796
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMD260911C00530000",
+            "strike": 530,
+            "expiration": "2026-09-11",
+            "volume": 6554,
+            "openInterest": 2149,
+            "oiChangeFromPrior": 1177,
+            "impliedVolatility": 0.5702
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMD260911C00550000",
+            "strike": 550,
+            "expiration": "2026-09-11",
+            "volume": 5904,
+            "openInterest": 2219,
+            "oiChangeFromPrior": 1064,
+            "impliedVolatility": 0.5884
+          },
+          {
+            "type": "call",
+            "contractSymbol": "AMD260911C00510000",
+            "strike": 510,
+            "expiration": "2026-09-11",
+            "volume": 4553,
+            "openInterest": 2537,
+            "oiChangeFromPrior": 1107,
+            "impliedVolatility": 0.5678
+          },
+          {
+            "type": "put",
+            "contractSymbol": "AMD260911P00520000",
             "strike": 520,
-            "expiration": "2026-09-09",
-            "volume": 9382,
-            "openInterest": 335,
-            "oiChangeFromPrior": 191,
-            "impliedVolatility": 0.4408
-          },
-          {
-            "type": "call",
-            "contractSymbol": "AMD260909C00495000",
-            "strike": 495,
-            "expiration": "2026-09-09",
-            "volume": 7346,
-            "openInterest": 685,
-            "oiChangeFromPrior": 315,
-            "impliedVolatility": 0.4622
+            "expiration": "2026-09-11",
+            "volume": 4529,
+            "openInterest": 491,
+            "oiChangeFromPrior": 424,
+            "impliedVolatility": 0.5635
           }
         ]
       },
@@ -4646,19 +4603,14 @@
     },
     {
       "ticker": "SPY",
-      "fetchedAt": "2026-09-08T18:09:55.720Z",
+      "fetchedAt": "2026-09-10T00:00:33.805Z",
       "sector": "Index",
       "price": {
-        "current": 767.7779,
-        "priorClose": 770.19,
-        "changePct": -0.31
+        "current": 762.4,
+        "priorClose": 765.96,
+        "changePct": -0.46
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 720.65,
-          "volume": 43049800
-        },
         {
           "date": "2026-05-04",
           "close": 718.01,
@@ -5092,118 +5044,118 @@
         {
           "date": "2026-09-04",
           "close": 770.19,
-          "volume": 34015600
+          "volume": 34054200
         },
         {
           "date": "2026-09-08",
-          "close": 767.78,
-          "volume": 19842425
+          "close": 765.96,
+          "volume": 44746100
         }
       ],
       "volume": {
-        "today": 19842425,
-        "avg30d": 41643814,
-        "relativeToAvg": 0.48
+        "today": 32250970,
+        "avg30d": 42475223,
+        "relativeToAvg": 0.76
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-08",
-          "2026-09-09",
-          "2026-09-10"
+          "2026-09-10",
+          "2026-09-11",
+          "2026-09-14"
         ],
-        "totalVolume": 6100570,
-        "callVolume": 2848796,
-        "putVolume": 3251774,
-        "callPutRatio": 0.88,
-        "callPremiumTraded": 206498364,
-        "putPremiumTraded": 148835168,
-        "premiumCallPutRatio": 1.39,
+        "totalVolume": 1785132,
+        "callVolume": 782280,
+        "putVolume": 1002852,
+        "callPutRatio": 0.78,
+        "callPremiumTraded": 233076947,
+        "putPremiumTraded": 202740862,
+        "premiumCallPutRatio": 1.15,
         "ivSkew": {
-          "otmPutIV": 0.3516,
-          "otmCallIV": 0.3281,
-          "skew": 0.0234,
-          "atmIV": 0.0316
+          "otmPutIV": 0.375,
+          "otmCallIV": 0.3359,
+          "skew": 0.0391,
+          "atmIV": 0.1353
         },
         "mostActiveStrikes": [
           {
             "type": "put",
-            "contractSymbol": "SPY260908P00767000",
-            "strike": 767,
-            "expiration": "2026-09-08",
-            "volume": 697562,
-            "openInterest": 4021,
-            "oiChangeFromPrior": 2324,
-            "impliedVolatility": 0.0338
-          },
-          {
-            "type": "call",
-            "contractSymbol": "SPY260908C00768000",
-            "strike": 768,
-            "expiration": "2026-09-08",
-            "volume": 661209,
-            "openInterest": 1757,
-            "oiChangeFromPrior": 564,
-            "impliedVolatility": 0.0294
+            "contractSymbol": "SPY260910P00762000",
+            "strike": 762,
+            "expiration": "2026-09-10",
+            "volume": 91938,
+            "openInterest": 856,
+            "oiChangeFromPrior": 337,
+            "impliedVolatility": 0.1259
           },
           {
             "type": "put",
-            "contractSymbol": "SPY260908P00766000",
-            "strike": 766,
-            "expiration": "2026-09-08",
-            "volume": 532652,
-            "openInterest": 3856,
-            "oiChangeFromPrior": 2102,
-            "impliedVolatility": 0.0379
+            "contractSymbol": "SPY260910P00763000",
+            "strike": 763,
+            "expiration": "2026-09-10",
+            "volume": 82251,
+            "openInterest": 928,
+            "oiChangeFromPrior": 193,
+            "impliedVolatility": 0.1215
           },
           {
             "type": "call",
-            "contractSymbol": "SPY260908C00767000",
-            "strike": 767,
-            "expiration": "2026-09-08",
-            "volume": 438901,
-            "openInterest": 1406,
-            "oiChangeFromPrior": 470,
-            "impliedVolatility": 0.0303
+            "contractSymbol": "SPY260910C00763000",
+            "strike": 763,
+            "expiration": "2026-09-10",
+            "volume": 68003,
+            "openInterest": 669,
+            "oiChangeFromPrior": 48,
+            "impliedVolatility": 0.1398
           },
           {
             "type": "call",
-            "contractSymbol": "SPY260908C00769000",
-            "strike": 769,
-            "expiration": "2026-09-08",
-            "volume": 433748,
-            "openInterest": 4022,
-            "oiChangeFromPrior": 2822,
-            "impliedVolatility": 0.0332
-          },
-          {
-            "type": "call",
-            "contractSymbol": "SPY260908C00770000",
-            "strike": 770,
-            "expiration": "2026-09-08",
-            "volume": 427017,
-            "openInterest": 8716,
-            "oiChangeFromPrior": 2537,
-            "impliedVolatility": 0.0381
+            "contractSymbol": "SPY260910C00764000",
+            "strike": 764,
+            "expiration": "2026-09-10",
+            "volume": 62722,
+            "openInterest": 697,
+            "oiChangeFromPrior": 62,
+            "impliedVolatility": 0.1347
           },
           {
             "type": "put",
-            "contractSymbol": "SPY260908P00765000",
+            "contractSymbol": "SPY260910P00760000",
+            "strike": 760,
+            "expiration": "2026-09-10",
+            "volume": 61173,
+            "openInterest": 3941,
+            "oiChangeFromPrior": 1861,
+            "impliedVolatility": 0.1345
+          },
+          {
+            "type": "put",
+            "contractSymbol": "SPY260910P00761000",
+            "strike": 761,
+            "expiration": "2026-09-10",
+            "volume": 55377,
+            "openInterest": 970,
+            "oiChangeFromPrior": 202,
+            "impliedVolatility": 0.1305
+          },
+          {
+            "type": "call",
+            "contractSymbol": "SPY260910C00765000",
             "strike": 765,
-            "expiration": "2026-09-08",
-            "volume": 391811,
-            "openInterest": 7144,
-            "oiChangeFromPrior": 4287,
-            "impliedVolatility": 0.0454
+            "expiration": "2026-09-10",
+            "volume": 52003,
+            "openInterest": 1532,
+            "oiChangeFromPrior": 1067,
+            "impliedVolatility": 0.1301
           },
           {
             "type": "put",
-            "contractSymbol": "SPY260908P00768000",
-            "strike": 768,
-            "expiration": "2026-09-08",
-            "volume": 361492,
-            "openInterest": 6048,
-            "oiChangeFromPrior": 3802,
-            "impliedVolatility": 0.0338
+            "contractSymbol": "SPY260911P00760000",
+            "strike": 760,
+            "expiration": "2026-09-11",
+            "volume": 50494,
+            "openInterest": 52182,
+            "oiChangeFromPrior": "UNAVAILABLE",
+            "impliedVolatility": 0.1488
           }
         ]
       },
@@ -5219,19 +5171,14 @@
     },
     {
       "ticker": "QQQ",
-      "fetchedAt": "2026-09-08T18:09:58.372Z",
+      "fetchedAt": "2026-09-10T00:00:36.880Z",
       "sector": "Index",
       "price": {
-        "current": 720.04,
-        "priorClose": 718.96,
-        "changePct": 0.15
+        "current": 716.31,
+        "priorClose": 718.36,
+        "changePct": -0.29
       },
       "history90d": [
-        {
-          "date": "2026-05-01",
-          "close": 674.15,
-          "volume": 39172600
-        },
         {
           "date": "2026-05-04",
           "close": 672.88,
@@ -5665,118 +5612,118 @@
         {
           "date": "2026-09-04",
           "close": 718.96,
-          "volume": 32784600
+          "volume": 32871100
         },
         {
           "date": "2026-09-08",
-          "close": 720.04,
-          "volume": 18207459
+          "close": 718.36,
+          "volume": 28341400
         }
       ],
       "volume": {
-        "today": 18207459,
-        "avg30d": 35409155,
-        "relativeToAvg": 0.51
+        "today": 26405228,
+        "avg30d": 35749837,
+        "relativeToAvg": 0.74
       },
       "options": {
         "expirationsPulled": [
-          "2026-09-08",
-          "2026-09-09",
-          "2026-09-10"
+          "2026-09-10",
+          "2026-09-11",
+          "2026-09-14"
         ],
-        "totalVolume": 4523267,
-        "callVolume": 2241540,
-        "putVolume": 2281727,
-        "callPutRatio": 0.98,
-        "callPremiumTraded": 279539275,
-        "putPremiumTraded": 103632459,
-        "premiumCallPutRatio": 2.7,
+        "totalVolume": 1161271,
+        "callVolume": 500412,
+        "putVolume": 660859,
+        "callPutRatio": 0.76,
+        "callPremiumTraded": 121250094,
+        "putPremiumTraded": 153767920,
+        "premiumCallPutRatio": 0.79,
         "ivSkew": {
-          "otmPutIV": 0.3516,
-          "otmCallIV": 0.3359,
-          "skew": 0.0156,
-          "atmIV": 0.0409
+          "otmPutIV": 0.3984,
+          "otmCallIV": 0.332,
+          "skew": 0.0664,
+          "atmIV": 0.1884
         },
         "mostActiveStrikes": [
           {
             "type": "call",
-            "contractSymbol": "QQQ260908C00720000",
-            "strike": 720,
-            "expiration": "2026-09-08",
-            "volume": 474193,
-            "openInterest": 8980,
-            "oiChangeFromPrior": 5496,
-            "impliedVolatility": 0.0413
-          },
-          {
-            "type": "call",
-            "contractSymbol": "QQQ260908C00721000",
-            "strike": 721,
-            "expiration": "2026-09-08",
-            "volume": 325760,
-            "openInterest": 4104,
-            "oiChangeFromPrior": 2066,
-            "impliedVolatility": 0.0416
-          },
-          {
-            "type": "put",
-            "contractSymbol": "QQQ260908P00720000",
-            "strike": 720,
-            "expiration": "2026-09-08",
-            "volume": 325169,
-            "openInterest": 5021,
-            "oiChangeFromPrior": 4273,
-            "impliedVolatility": 0.0405
-          },
-          {
-            "type": "put",
-            "contractSymbol": "QQQ260908P00719000",
-            "strike": 719,
-            "expiration": "2026-09-08",
-            "volume": 321371,
-            "openInterest": 4222,
-            "oiChangeFromPrior": 3360,
-            "impliedVolatility": 0.0418
-          },
-          {
-            "type": "call",
-            "contractSymbol": "QQQ260908C00719000",
-            "strike": 719,
-            "expiration": "2026-09-08",
-            "volume": 276545,
-            "openInterest": 3634,
-            "oiChangeFromPrior": 2551,
-            "impliedVolatility": 0.0435
-          },
-          {
-            "type": "put",
-            "contractSymbol": "QQQ260908P00718000",
-            "strike": 718,
-            "expiration": "2026-09-08",
-            "volume": 267161,
-            "openInterest": 4917,
-            "oiChangeFromPrior": 4051,
-            "impliedVolatility": 0.0471
-          },
-          {
-            "type": "put",
-            "contractSymbol": "QQQ260908P00717000",
+            "contractSymbol": "QQQ260910C00717000",
             "strike": 717,
-            "expiration": "2026-09-08",
-            "volume": 233805,
-            "openInterest": 5232,
-            "oiChangeFromPrior": 2174,
-            "impliedVolatility": 0.0562
+            "expiration": "2026-09-10",
+            "volume": 56217,
+            "openInterest": 685,
+            "oiChangeFromPrior": 41,
+            "impliedVolatility": 0.1825
+          },
+          {
+            "type": "put",
+            "contractSymbol": "QQQ260910P00715000",
+            "strike": 715,
+            "expiration": "2026-09-10",
+            "volume": 49028,
+            "openInterest": 2148,
+            "oiChangeFromPrior": 1104,
+            "impliedVolatility": 0.1932
+          },
+          {
+            "type": "put",
+            "contractSymbol": "QQQ260910P00717000",
+            "strike": 717,
+            "expiration": "2026-09-10",
+            "volume": 49008,
+            "openInterest": 1116,
+            "oiChangeFromPrior": 467,
+            "impliedVolatility": 0.1846
+          },
+          {
+            "type": "put",
+            "contractSymbol": "QQQ260910P00716000",
+            "strike": 716,
+            "expiration": "2026-09-10",
+            "volume": 48153,
+            "openInterest": 1208,
+            "oiChangeFromPrior": 857,
+            "impliedVolatility": 0.1887
           },
           {
             "type": "call",
-            "contractSymbol": "QQQ260908C00718000",
+            "contractSymbol": "QQQ260910C00720000",
+            "strike": 720,
+            "expiration": "2026-09-10",
+            "volume": 40531,
+            "openInterest": 2449,
+            "oiChangeFromPrior": 818,
+            "impliedVolatility": 0.1686
+          },
+          {
+            "type": "call",
+            "contractSymbol": "QQQ260910C00718000",
             "strike": 718,
-            "expiration": "2026-09-08",
-            "volume": 208302,
-            "openInterest": 4248,
-            "oiChangeFromPrior": 3205,
-            "impliedVolatility": 0.0595
+            "expiration": "2026-09-10",
+            "volume": 36059,
+            "openInterest": 1424,
+            "oiChangeFromPrior": 186,
+            "impliedVolatility": 0.1776
+          },
+          {
+            "type": "call",
+            "contractSymbol": "QQQ260910C00716000",
+            "strike": 716,
+            "expiration": "2026-09-10",
+            "volume": 33991,
+            "openInterest": 620,
+            "oiChangeFromPrior": 274,
+            "impliedVolatility": 0.188
+          },
+          {
+            "type": "put",
+            "contractSymbol": "QQQ260910P00710000",
+            "strike": 710,
+            "expiration": "2026-09-10",
+            "volume": 31022,
+            "openInterest": 2334,
+            "oiChangeFromPrior": 1295,
+            "impliedVolatility": 0.2096
           }
         ]
       },
